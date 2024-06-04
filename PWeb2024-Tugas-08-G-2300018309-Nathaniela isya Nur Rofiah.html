@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Form dengan JavaScript</title>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>FORM</header>
+      <!-- Form -->
+      <form class="form" id="formInput" method="post" action="php.php" onsubmit="return validateForm() ">
+        <div class="input-box">
+          <label for="name">Nama : </label>
+          <input type="text" id="name" name="name" placeholder="Masukan namamu" required /><br /><br />
+        </div>
+        <div class="gender-box">
+          <label for="jenkel"><h3>Jenis Kelamin :</h3></label>
+          <div class="gender-opsi">
+            <div class="gender"><input type="radio" id="jenkel_pria" name="jenkel" value="Pria" />Pria</div>
+            <div class="gender"><input type="radio" id="jenkel_wanita" name="jenkel" value="Wanita" />Wanita</div>
+          </div>
+        </div>
+        <div class="input-box">
+          <label for="name">Tanggal Lahir : </label>
+          <input type="date" id="tgl" name="tgl" /><br /><br />
+        </div>
+        <div class="input-box">
+          <label for="age">Umur : </label>
+          <input type="number" id="age" name="age" min="0" required /><br /><br />
+        </div>
+        <div class="input-box">
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" placeholder="Masukan emailmu" required /><br /><br />
+        </div>
+        <div class="input-box">
+          <label for="country">Asal :</label>
+          <select id="country" name="country">
+            <option value="Jawa">Jawa</option>
+            <option value="Sum">Sumatera</option>
+            <option value="kal">Kalimantan</option>
+            <option value="Sul">Sulawesi</option>
+            <option value="Bal">Bali</option>
+            <option value="Pap">Papua</option></select
+          ><br /><br />
+        </div>
+        <div class="input-box">
+          <label for="notelp">Nomor Telpon :</label>
+          <input type="tel" id="notelp" name="notelp" placeholder="Masukan Nomor telponmu" required /><br /><br />
+        </div>
+        <div class="input-box">
+          <label for="latbel">Warna Favorite :</label>
+          <input type="color" id="latbel" name="latbel" /><br /><br />
+        </div>
+        <div class="input-box">
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+      <div id="output"></div>
+    </section>
+    <script src="javascript.js"></script>
+  </body>
+</html>
